@@ -137,13 +137,12 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Sales Order": {
+		  "before_insert": "nms.nms.overrides.sales_order.clear_prevdoc",
+        "before_save": "nms.nms.overrides.sales_order.clear_prevdoc",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
