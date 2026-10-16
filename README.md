@@ -4,4 +4,4 @@ for nms
 
 #### License
 
-mit
+mit# nms
